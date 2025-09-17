@@ -13,6 +13,15 @@ You are done. The installation is completed.
 ## Usage
 Try the example plugin in _plugins/wp-codespace_, make some changes and appreciate the advantages of a pre-configured codespace.
 
+### Open the site (Codespaces URL)
+- The web server listens on port 80. In GitHub Codespaces your site is available at:
+  - `https://<CODESPACE_NAME>-80.app.github.dev/`
+- Do not use `-443` in the URL. There is no service on port 443 in this container, so `https://<CODESPACE_NAME>-443.app.github.dev/` will return 404.
+- You can open the correct URL from the Ports panel in VS Code (look for port 80 → Open in Browser). If you want to share the link externally, set the port visibility to Public.
+
+phpMyAdmin is available on port 81:
+- `https://<CODESPACE_NAME>-81.app.github.dev/`
+
 ### Linting
 Edit the file _wordpress/wp-content/plugins/wp-codespace/wp-codespace.php_:
 - Delete a whitespace between parentheses and curly brackets and see the code linting in action. 
